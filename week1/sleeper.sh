@@ -2,5 +2,5 @@
 
 while true;
 	do echo "Hanging out....";
-	sleep 2;
+	sleep 1;
 	done
