@@ -1,4 +1,4 @@
 #! /usr/bin/bash
 
-ls -l | wc -l > num_contents.txt
+ls -l | tail -n +2 | wc -l > num_contents.txt
 
