@@ -1,3 +1,4 @@
+echo "Sourcing default bash shell"
 source ~/.bashrc
 
 
