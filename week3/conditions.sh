@@ -5,7 +5,7 @@ read -p "Do you want to run the for loop (true or false): " RFL
 declare -a fruits=("Orange" "Apple")
 
 $RFL\
-&& for fruit in ${fruits[@]}
+&& for fruit in ${fruits[@]};
 do
 	echo "${fruit}"
 done
@@ -15,7 +15,7 @@ read -p "Do you want to run the while loop (true or false):" RWL
 $RWL\
 && read -p "NUM iterations: " iterations\
 && count=1\
-&& while [ $count -le $iterations ]
+&& while [ $count -le $iterations ];
 do
 	echo "$count iteration"
 	((count++))
