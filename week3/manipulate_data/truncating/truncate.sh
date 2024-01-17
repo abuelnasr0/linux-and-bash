@@ -25,7 +25,10 @@ else
     echo "Lines must not be greater than $lines"
 fi
 done 
-[ $WRONG_ENTRY -eq 0 ] && head -n $HL file.txt > "head_$HL.txt"
+find . -name 'head_*.txt' -delete
+
+[ $WRONG_ENTRY -eq 0 ] \
+&& head -n $HL file.txt > "head_$HL.txt"
 
 
 read -p "DO you want to perform tail operation (true or false) :" TO
@@ -43,7 +46,10 @@ else
     echo "Lines must not be greater than $lines"
 fi
 done 
-[ $WRONG_ENTRY -eq 0 ] && tail -n $TL file.txt > "tail_$TL.txt"
+find . -name 'tail_*.txt' -delete
+
+[ $WRONG_ENTRY -eq 0 ] \
+&& tail -n $TL file.txt > "tail_$TL.txt"
 
 read -p "DO you want to perform shuf operation (true ot false) :" SO
 
@@ -60,8 +66,7 @@ else
 echo "Lines must not be greater than $lines"
 fi
 done
-[ $WRONG_ENTRY -eq 0 ] && shuf -n $SL file.txt > "shuf_$SL.txt"
+find . -name 'shuf_*.txt' -delete
 
-
-
-
+[ $WRONG_ENTRY -eq 0 ] \
+&& shuf -n $SL file.txt > "shuf_$SL.txt"
